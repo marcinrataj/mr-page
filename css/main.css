@@ -310,9 +310,22 @@ header.hero-img .fa-chevron-down {
   text-align: center;
 }
 
+@media (min-width: 1400px) {
+  .github-img {
+    width: 300px !important;
+  }
+}
+@media (max-width: 1400px) {
+  .github-img {
+    width: 200px !important;
+  }
+}
 @media (min-width: 1200px) {
   header.hero-img {
     background-image: url("../img/macbook-big.jpg");
+  }
+  .github-img img {
+    width: 200px !important;
   }
 }
 @media (max-width: 1200px) {
@@ -376,14 +389,14 @@ header.hero-img .fa-chevron-down {
   }
   .parallax .underline {
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 0px;
     right: 0px;
   }
   .parallax .interactive-section {
     position: absolute;
     align-items: center;
-    top: 0px;
+    top: -20px;
     left: 0px;
     right: 0px;
     width: 450px;
@@ -392,6 +405,12 @@ header.hero-img .fa-chevron-down {
   .parallax .interactive-section .menu {
     width: 100%;
   }
+  .github-img img {
+    width: 230px;
+  }
+  .achievements .container {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 456px) {
   header.hero-img {
@@ -399,6 +418,7 @@ header.hero-img .fa-chevron-down {
   }
   .about-me-section {
     width: 360px;
+    flex-direction: column;
     flex-direction: column;
     align-items: center;
   }
@@ -454,7 +474,7 @@ header.hero-img .fa-chevron-down {
   }
   .parallax {
     position: relative;
-    width: 300px;
+    width: 320px;
   }
   .parallax .interactive-section {
     position: absolute;
@@ -462,18 +482,13 @@ header.hero-img .fa-chevron-down {
     top: 0px;
     left: 0px;
     right: 0px;
-    width: 350px;
     width: 300px;
     flex-direction: column;
   }
   .parallax .interactive-section .menu {
     width: 300px;
   }
-  .achievements {
-    display: flex;
-    flex-direction: column;
-  }
-  .achievements .row div {
-    width: 120px;
+  .container .row {
+    align-items: center;
   }
 }/*# sourceMappingURL=main.css.map */
