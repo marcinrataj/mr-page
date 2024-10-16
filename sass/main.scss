@@ -568,4 +568,15 @@ header.hero-img {
 			}
 		}
 	}
+
+	.achievements{
+		display: flex;
+		flex-direction: column;
+
+		.row{
+			div{
+				width: 120px;
+			}
+		}
+	} 
 }

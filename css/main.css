@@ -469,4 +469,11 @@ header.hero-img .fa-chevron-down {
   .parallax .interactive-section .menu {
     width: 300px;
   }
+  .achievements {
+    display: flex;
+    flex-direction: column;
+  }
+  .achievements .row div {
+    width: 120px;
+  }
 }/*# sourceMappingURL=main.css.map */
