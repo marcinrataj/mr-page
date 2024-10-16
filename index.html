@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Strony internetowe na zamówienie. Dzięki mnie zyskasz swoją unikatową stronę internetową, która będzie twoją wizytówką, będzie na ciebie zarabiać, dzięki niej twoi klienci będą mogli lepiej poznać twoją ofertę co w znacznym stopniu przełoży się na rozwój twojej działalności." />
+  <meta name="keywords"
+    content="marcinrataj-strony, strony internetowe, strony internetowe na zamówienie, marcin rataj, marcin rataj strony internetowe" />
+  <meta name="author" content="Marcin Rataj" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strony WWW - Projektowanie, Tworzenie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/93c332a605.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <meta />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#"> Marcin Rataj</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#offer">About me</a>
+          <a class="nav-link" href="#aboutme">Resume</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-img" id="home">
+    <div class="hero-text text-center p-2">
+      <h1 data-aos="fade-up " data-aos-delay="200">
+        Hi, I'm
+        <span style="color: #6c63ff; font-weight: bold">Marcin Rataj</span>
+      </h1>
+      <div class="container">
+        <h1 id="animatedText">Communicative Guy</h1>
+        <h2>I try to learn new things and improve the code every day</h2>
+        <div class="arrow">
+          &#x2193;
+          <!-- Kod Unicode dla strzałki w dół -->
+        </div>
+      </div>
+
+      <div class="hero-shadow"></div>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="about-me-section" data-aos="fade-up" data-aos-delay=" 200">
+      <!-- Pole po lewej (np. na zdjęcie) -->
+      <div class="about-image">
+        <div class="image-box">
+          <img width="250px" height="250px" src="/img/aboutmelogo.jpg" alt="" />
+        </div>
+        <!-- Puste okienko, tutaj może być obraz -->
+      </div>
+
+      <!-- Pole po prawej (tekst opisu) -->
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm a passionate JavaScript developer with a love for creating
+          interactive and dynamic web experiences. I enjoy solving complex
+          problems and constantly improving my coding skills. I also love
+          gaming and diving into new technologies. In my free time, you can
+          find me exploring new tools or gaming!
+        </p>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="parallax">
+        <div class="about-text"></div>
+        <h2 class="section-title resume-title" style="text-transform: capitalize; color: #fff;">Resume</h2>
+        <div class="underline"></div>
+        <div class="interactive-section">
+          <!-- Lewa kolumna z przyciskami -->
+          <div class="menu">
+            <button class="menu-btn" data-section="education">Education</button>
+            <button class="menu-btn" data-section="work">Work</button>
+            <button class="menu-btn" data-section="programming">
+              Programming
+            </button>
+            <button class="menu-btn" data-section="projects">Projects</button>
+          </div>
+
+          <!-- Prawa kolumna z treścią -->
+          <div class="content">
+            <div class="section" id="education">
+              <h2>Education</h2>
+              <p>
+                I graduated from the University of Technology with a degree in
+                Computer Science...
+              </p>
+            </div>
+
+            <div class="section" id="work">
+              <h2>Work</h2>
+              <p>
+                I have worked as a JavaScript Developer for 3 years in various
+                companies...
+              </p>
+            </div>
+
+            <div class="section" id="programming">
+              <h2>Programming</h2>
+              <p>
+                I have experience in various programming languages including
+                JavaScript, Python, and Java...
+              </p>
+            </div>
+
+            <div class="section" id="projects">
+              <h2>Projects</h2>
+              <p>Here are some of my personal and professional projects...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="github-section py-5 bg-light" data-aos="fade-up" data-aos-delay=" 200">
+      <h2 class="section-title" style="text-transform: capitalize;">Github Projects</h2>
+      <div class="underline"></div>
+      <div class="container">
+        <div class="price-wrap row text-center justify-content-center">
+          <div class="col-md-6 col-xl-4">
+            <div class="project-box">
+              <p class="project-title">gym-app</p>
+              <img class="github-img" src="/img/gym-app-img.png" alt="">
+              <hr>
+              <button class="btn btn-primary">demo</button>
+              <button class="btn btn-secondary">repository</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="project-box">
+              <p class="project-title">noclegi</p>
+              <img class="github-img" src="/img/noclegi-img.png" alt="">
+              <hr>
+              <button class="btn btn-primary">demo</button>
+              <button class="btn btn-secondary">repository</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="project-box">
+              <p class="project-title">courses-shop</p>
+              <img class="github-img" src="/img/courses-shop-img.png" alt="">
+              <hr>
+              <button class="btn btn-primary">demo</button>
+              <button class="btn btn-secondary">repository</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="project-box">
+              <p class="project-title">diamonds-gold-website</p>
+              <img class="github-img" src="/img/diamonds-website-img.png" alt="">
+              <hr>
+              <button class="btn btn-primary">demo</button>
+              <button class="btn btn-secondary">repository</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="project-box">
+              <p class="project-title">tropical-paradise-website</p>
+              <img class="github-img" src="/img/tropical-website-img.png" alt="">
+              <hr>
+              <button class="btn btn-primary">demo</button>
+              <button class="btn btn-secondary">repository</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="project-box">
+              <p class="project-title">gamer-website</p>
+              <img class="github-img" src="/img/gamer-website-img.png" alt="">
+              <hr>
+              <button class="btn btn-primary">demo</button>
+              <button class="btn btn-secondary">repository</button>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="price-wrap row text-center justify-content-center">
+            <div class="col-md-6 col-xl-4">
+              <div class="project-box">
+                <p class="project-title">travel-website</p>
+                <img class="github-img" src="/img/travel-website-img.png" alt="">
+                <hr>
+                <button class="btn btn-primary">demo</button>
+                <button class="btn btn-secondary">repository</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="project-box">
+                <p class="project-title">guess-my-number</p>
+                <img class="github-img" src="/img/guess-my-number-img.png" alt="">
+                <hr>
+                <button class="btn btn-primary">demo</button>
+                <button class="btn btn-secondary">repository</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="project-box">
+                <p class="project-title">my-first-website</p>
+                <img class="github-img" src="/img/first-website-img.png" alt="">
+                <hr>
+                <button class="btn btn-primary">demo</button>
+                <button class="btn btn-secondary">repository</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary">more on GitHub</button>
+        </div>
+    </section>
+
+    <section id="aboutme" class="achievements py-5" id="achievements">
+      <h2 class="section-title" style="text-transform: none;">Tech Stack</h2>
+      <div class="underline"></div>
+
+      <div class="container">
+        <div class="row text-center achievements-list">
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img
+              src="https://icons.iconarchive.com/icons/fa-team/fontawesome-brands/72/FontAwesome-Brands-React-icon.png"
+              width="72" height="72" alt="Ikona Języka React" />
+            <p class="achievement-number">React</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img
+              src="https://icons.iconarchive.com/icons/fa-team/fontawesome-brands/72/FontAwesome-Brands-Node-Js-icon.png"
+              width="72" height="72" alt="Ikona Node.js" />
+            <p class="achievement-number">JavaScript</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/pictogrammers/material/72/language-html5-icon.png" width="72"
+              height="72" alt="Ikona HTML" />
+
+            <p class="achievement-number">HTML</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/aniket-suvarna/box-logo/72/bxl-css-3-icon.png" width="72"
+              height="72" alt="Ikona CSS" />
+
+            <p class="achievement-number">CSS</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/arturo-wibawa/akar/72/bootstrap-icon.png" width="72"
+              height="72" alt="Ikona Bootstrap">
+
+
+            <p class="achievement-number">Bootstrap</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/ionic/ionicons/72/logo-sass-icon.png" width="72" height="72"
+              alt="Ikona Sass" />
+
+            <p class="achievement-number">Sass</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/pictogrammers/material/72/webpack-icon.png" width="72"
+              height="72" alt="Ikona Webpack" />
+            <p class="achievement-number">Webpack</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/pictogrammers/material/72/wordpress-icon.png" width="72"
+              height="72" alt="Ikona Wordpress">
+
+            <p class="achievement-number">Wordpress</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img
+              src="https://icons.iconarchive.com/icons/fa-team/fontawesome-brands/72/FontAwesome-Brands-Figma-icon.png"
+              width="72" height="72" alt="Ikona Figma">
+
+            <p class="achievement-number">Figma</p>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <img src="https://icons.iconarchive.com/icons/simpleicons-team/simple/72/adobe-photoshop-icon.png"
+              width="72" height="72" alt="Ikona Photoshop">
+
+
+            <p class="achievement-number">Photoshop</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light py-4 text-center">
+    <p class="mb-0">&copy; 2023 - 2024 | marcinrataj-strony.pl</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      startEvent: 'DOMContentLoaded',
+      offset: 120, //ilość pikseli od ilu scrollowanych się zaczyna działać
+      once: true, //animacje odpalą się tylko raz, żebysmy nie dostali oczopląsu
+    });
+  </script>
+  <script src="./js/script.js"></script>
+  <script src="./js/slick.js"></script>
+</body>
+
+</html>

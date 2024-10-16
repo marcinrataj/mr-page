@@ -1,0 +1,571 @@
+@use './colors' as *;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 74px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #e8e8f1;
+}
+
+.blue-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgb(0, 0, 0, 0.8);
+}
+// Tytuły sekcji
+.section-title {
+	text-align: center;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+// Navbar
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 5;
+
+	.navbar-toggler {
+		padding: 10px 15px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.nav-link,
+	.navbar-nav .show > .nav-link,
+	.navbar-brand,
+	.fa-bars {
+		color: $white;
+	}
+	.nav-link:focus,
+	.nav-link:hover,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .show > .nav-link {
+		color: $main-color;
+	}
+}
+
+// Header
+header.hero-img {
+	position: relative;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: $white;
+	z-index: 0;
+
+	#animatedText {
+		text-transform: capitalize;
+			font-size: 2.5rem;
+			font-weight: bold;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
+	}
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: $white;
+	}
+}
+
+// Header Strzałka Pulsująca
+
+/* Strzałka */
+.arrow {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 3rem;
+	animation: bounce 2s infinite; /* Uruchom animację */
+}
+
+/* Definicja animacji podskakiwania */
+@keyframes bounce {
+	0%, 100% {
+			transform: translateX(-50%) translateY(0); /* Początkowa pozycja */
+	}
+	50% {
+			transform: translateX(-50%) translateY(-20px); /* Przesunięcie w górę */
+	}
+}
+
+
+/* Animacja wchodzenia od lewej */
+@keyframes slideInLeft {
+	0% {
+			transform: translateX(-100%);
+			opacity: 0;
+	}
+	100% {
+			transform: translateX(0);
+			opacity: 1;
+	}
+}
+
+/* Animacja wchodzenia tekstu */
+@keyframes fadeIn {
+	0% {
+			opacity: 0;
+			transform: translateX(50px);
+	}
+	100% {
+			opacity: 1;
+			transform: translateX(0);
+	}
+}
+
+/* Animacja pulsowania (dla okienka) */
+@keyframes pulse {
+	0% {
+			transform: scale(1);
+	}
+	50% {
+			transform: scale(1.05);
+	}
+	100% {
+			transform: scale(1);
+	}
+}
+
+// O mnie 
+.about-me-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 50px;
+	max-width: 1200px;
+	margin: 100px auto;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	position: relative;
+}
+
+/* Stylizacja lewej strony (okienko/obrazek) */
+.about-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	animation: slideInLeft 2s ease forwards;
+}
+
+.image-box {
+	width: 250px;
+	height: 250px;
+	border-radius: 10px;
+	animation: pulse 3s infinite;
+}
+
+/* Stylizacja prawej strony (tekst opisu) */
+.about-text {
+	flex: 2;
+	padding-left: 30px;
+	opacity: 0;
+	animation: fadeIn 2s ease forwards 1s;
+}
+
+.about-text h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.about-text p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	color: #333;
+}
+///////////////////////////////////////////////////////////////
+
+// teraz powinno byc menu
+
+/* Lewa kolumna z przyciskami */
+.menu {
+	flex: 1;
+	background-color: gray;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.menu-btn {
+	background: none;
+	border: 2px solid white;
+	color: white;
+	padding: 15px;
+	margin: 10px 0;
+	font-size: 1.2rem;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: background 0.3s ease;
+}
+
+.menu-btn:hover, .menu-btn.active {
+	background-color: #ffffff33;
+}
+
+
+/* Prawa kolumna z treścią */
+.content {
+	flex: 3;
+	padding: 40px;
+}
+
+/* Sekcja treści, domyślnie ukryta */
+.section {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+/* Widoczna sekcja */
+.section.active {
+	display: block;
+	opacity: 1;
+}
+
+
+.parallax {
+  /* The image used */
+  background-image: url("/img/laptop-background-img.png");
+	width: 100vw;
+  /* Set a specific height */
+  min-height: 700px;
+  max-height: 700px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+	.interactive-section {
+		display: flex;
+		max-width: 1200px;
+		margin: 100px auto;
+		background-color: #fff;
+		border-radius: 15px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+	}
+	
+}
+
+.resume-title{
+	padding-top: 60px !important;
+}
+///////////////////////////////////////////////////////////////
+
+// Projekty Github
+
+.github-section {
+	.project-box {
+		margin: 20px;
+		padding: 30px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.4);
+		transition: scale 0.3s;
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	.project-box:hover {
+		scale: 1.05;
+	}
+
+	.project-title{
+		color: $main-color;
+		text-transform: none;
+		font-weight: bold;
+		font-size: 20px;
+	}
+}
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+// Centrowanie Boxów, elementów w sekcjach na środku
+.container {
+    text-align: center;
+}
+
+
+// zostało zrobić media
+
+
+// Media Header
+
+
+@media (min-width: 1200px) {
+	// Hero
+
+	header.hero-img {
+		background-image: url('../img/macbook-big.jpg');
+	}
+
+
+}
+
+@media (max-width: 1200px) {
+
+	.about-me-section{
+		width: 950px;
+	}
+	.parallax{
+		.interactive-section{
+			width: 950px;
+		}
+	}
+
+	
+
+
+}
+
+@media (min-width: 768px) {
+	header.hero-img {
+		background-image: url('../img/macbook-big.jpg');
+	}
+	.hero-text {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+
+
+@media (min-width: 992px) {
+	// Hero
+	header.hero-img {
+		background-image: url('../img/macbook-big.jpg');
+	}
+	html {
+		scroll-padding-top: 72px;
+	}
+	.aboutus-hero {
+		background-image: url('../img/technology-big.jpg');
+	}
+}
+
+@media (max-width: 992px) {
+	.about-me-section{
+		width: 750px;
+	}
+
+	.parallax{
+		.interactive-section{
+			width: 750px;
+		}
+	}
+	
+}
+
+@media (max-width: 768px) {
+	header.hero-img {
+		background-image: url('../img/macbook-big.jpg');
+	}
+	.about-me-section{
+		width: 450px;
+		flex-direction: column;
+
+		h2{
+			margin-top: 20px;
+		}
+	}
+
+
+	.parallax{
+		position: relative;
+		width: 100%;
+
+	.resume-title{
+		position: absolute;
+		top:-30px;
+		left:0px;
+		right:0px;
+	}
+	.underline{
+		position: absolute;
+		top: 70px;
+		left:0px;
+		right:0px;
+	}
+
+		.interactive-section{
+			position: absolute;
+			align-items: center;
+			top:0px;
+			left:0px;
+			right:0px;
+			width: 450px;
+			flex-direction: column;
+			.menu{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 456px) {
+	header.hero-img {
+		background-image: url('../img/macbook-big.jpg');
+	}
+	.about-me-section{
+		width: 360px;
+		flex-direction: column;
+		align-items: center;
+		.image-box{
+
+			
+			img{
+				width: 300px;
+				height: 300px;
+			}
+		}
+
+		.about-text{
+
+			h2{
+				text-align: center;
+				margin-top: 20px;
+			}
+			
+			p{
+				text-align: center ;
+				font-size: 16px;
+				font-style:inherit;
+				text-align: center;
+			}
+			
+		}
+		
+	}
+
+	.parallax{
+		position: relative;
+		width: 100%;
+
+	.resume-title{
+		position: absolute;
+		top:-30px;
+		left:0px;
+		right:0px;
+	}
+	.underline{
+		position: absolute;
+		top: 70px;
+		left:0px; 
+		right:0px;
+	}
+
+		.interactive-section{
+			position: absolute;
+			align-items: center;
+			top:0px;
+			left:0px;
+			right:0px;
+			width: 350px;
+			flex-direction: column;
+			.menu{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+
+
+	.about-me-section{
+		width: 300px;
+	}
+	.github-img{
+		width: 200px !important;
+	}
+
+
+	.parallax{
+		position: relative;
+		width: 300px;
+		
+		
+		.interactive-section{
+			position: absolute;
+			align-items: center;
+			top:0px;
+			left:0px;
+			right:0px;
+			width: 350px;
+			width: 300px;
+			flex-direction: column;
+			.menu{
+				width: 300px;
+			}
+		}
+	}
+}
